@@ -1,0 +1,142 @@
+body{
+    background-color: black;
+    /*display: flex;
+    flex-direction: column;
+    align-items: center ;
+    justify-content: space-around;*/
+    height:95vh ;
+    margin: 0px;
+    width:100vw;
+}
+header{
+    text-align: center;
+    background-color: rgb(14, 14, 14);
+    width: 100%;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+#menu{
+    background-color: rgb(37, 37, 37);
+    width:100%;
+    height: 40px;
+    border-bottom-right-radius:10px ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.5s;
+}
+#menu button{
+    background-color: brown;
+    border-style: none;
+    padding: 5px;
+    border-radius: 5px;
+    width: 120px;
+    transition: 0.5s;
+}
+#menu button:hover{
+    background-color: rgb(231, 87, 43);
+    border-style: none;
+    height: 35px;
+    padding: 5px;
+    border-radius: 5px;
+    width: 140px;
+    cursor: pointer;
+}
+
+#foot{
+    position: fixed;
+    bottom: 0%;
+    text-align: center;
+    background-color: rgb(14, 14, 14);
+    width: 100%;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+#mic{
+    display: flex;
+    justify-content: center;
+}
+h2,p{
+    color: rgb(206, 232, 255);
+    margin: 4px;
+}
+.char{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    border-radius: 15px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    
+    transition: 0.3s;
+}
+.char img{
+    width: 50px;
+}
+.char *{
+    margin: 10px;
+}
+.char:hover{
+    width: 240px;
+
+    cursor: pointer;
+}
+#ind{
+    padding: 10px;
+    width: 90%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+#charac{
+    background-color: rgb(205, 137, 92);
+    width: 30%;
+    height: 80%;
+    border-radius: 15px;
+    padding: 10px;
+}
+#YuData{
+    background-color: rgb(41, 112, 73);
+    width: 50%;
+    height: 100%;
+    border-style: outset;
+    overflow-y: scroll;
+    padding:10px ;
+    
+}
+.Opt{
+    width: 100px;
+    height: 100px;
+    border-style: outset;
+    border: 2px;
+    border-color: silver;
+    margin: 5px;
+}
+.Opt:hover{
+    cursor: pointer;
+}
+.Opt img{
+    width: 90px;
+    height: 90px;
+    border-style: outset;
+    border-radius: 5px;
+}
+#MxFoto{
+    width: 120px;
+    height: 120px;
+}
+#cont{
+    width: 120px;
+    height: 120px;
+    border-style: outset;
+    border-color: brown;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bosque oscuro: Personajes</title>
+</head>
+<body>
+    <header>
+        <div id="tile">
+            <h2>El bosque oscuro</h2>
+        </div>     
+    </header>
+    <div id="menu">
+        <button onclick="location.href='../index/index.html'">
+            Index
+        </button>
+        <button onclick="location.href='../cuentos/cuento.html'">
+            Cuento
+        </button>
+        <button onclick="location.href='../linea/linea.html'">
+            Linea del tiempo
+        </button>
+        <button onclick="location.href='../objetos/objetos.html'">
+            Objetos
+        </button>
+        <button onclick="location.href='../personajes/personajes.html'">
+            Personajes
+        </button>
+        <button onclick="location.href='../ubicaciones/ubicaciones.html'">
+            Ubicaciones
+        </button>
+    </div>
+    <section id="mic">
+        <div class="char" style="background-color: cornflowerblue;" id="Principal">
+            <img src="Principales.png" alt="" >
+            <h4>Personajes Principales</h4>
+        </div>
+        <div class="char" style="background-color: coral;" id="Secundario">
+            <img src="secundarios.png" alt="">
+            <h4>Personajes Secundarios</h4>
+        </div>
+    </section>
+    <section id="ind">
+        <article id="charac">
+
+        </article>
+        <article id="YuData">
+            <div id="cont">
+                <img src="" id="MxFoto" alt="">
+            </div>
+            <table>
+                <tr>
+                    <td><h2 style="color: black;">Nombre: </h2></td>
+                    <td><h4 id="nm"></h4></td>
+                </tr>
+                <tr>
+                    <td><h3 style="color: black;">Edad: </h3></td>
+                    <td><h4 id="age"></h4></td>
+                </tr>
+                <tr>
+                    <td><h3 style="color: black;">Altura: </h3></td>
+                    <td><h4 id="km"></h4></td>
+                </tr>
+                <tr>
+                    <td><h3 style="color: black;">Descripcion: </h3></td>
+                    <td><p id="des"></p></td>
+                </tr>
+                <tr>
+                    <td><h3  style="color: black;">Comentarios: </h3></td>
+                    <td><p id="cm"></p></td>
+                </tr>
+            </table>
+            
+        </article>
+    </section>
+    <footer id="foot">
+        <p>Pagina hecha por Martin 248127</p>
+    </footer>
+    <script src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(".char").click(function(){
+            let us = $(this).attr("id")
+            var il
+            var u=0
+            console.log(us)
+            $("#charac").empty()
+            $.each(characters.personas,function(index,value){
+                //console.log("Indice: "+index+", Valor: "+ Object.entries(value).map(([key, value]) => value))
+                il = Object.entries(value).map(([key,value])=>value)
+                var ol = il[0]
+                
+                console.log(il[0])
+                if(ol==us){
+                    $("#charac").append(`<div class="Opt" id=${u}><img src=${il[1]}></div>`)
+                }
+                u++
+            })
+            
+            console.log(us)
+            console.log(il)
+        })
+        
+        $(document).on("click",".Opt",function(){
+            let id = $(this).attr("id")
+            console.log(id)
+            call(parseInt(id))
+        })
+        function call(nix){
+                $("#MxFoto").attr("src",characters.personas[nix]["Foto"])
+                $("#nm").text(characters.personas[nix]["Nombre"])
+                $("#age").text(characters.personas[nix]["Edad"])
+                $("#km").text(characters.personas[nix]["Altura"])
+                $("#des").text(characters.personas[nix]["Descripcion"])
+                $("#cm").text(characters.personas[nix]["Comentarios"])
+            }
+
+    </script>
+</body>
+</html>
