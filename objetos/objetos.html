@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bosque oscuro: objetos</title>
+</head>
+<body>
+    <header>
+        <div id="tile">
+            <h2>El bosque oscuro</h2>
+        </div>     
+    </header>
+    <div id="menu">
+        <button onclick="location.href='../index/index.html'">
+            Index
+        </button>
+        <button onclick="location.href='../cuentos/cuento.html'">
+            Cuento
+        </button>
+        <button onclick="location.href='../linea/linea.html'">
+            Linea del tiempo
+        </button>
+        <button onclick="location.href='../objetos/objetos.html'">
+            Objetos
+        </button>
+        <button onclick="location.href='../personajes/personajes.html'">
+            Personajes
+        </button>
+        <button onclick="location.href='../ubicaciones/ubicaciones.html'">
+            Ubicaciones
+        </button>
+    </div>
+    <div id="mid">
+        <article id="inventory">
+            <section id="uper">
+                <div id="picture">
+                    <img src="Holder.png" alt="" id="pic">
+                </div>
+                
+                <div id="data">
+                    <table>
+                        <tr>
+                            <td><h3>Nombre: </h3></td>
+                            <td><h4 id="Nres"></h4></td>
+                        </tr>
+                        <tr>
+                            <td><h4>Ubicacion: </h4></td>
+                            <td><p id="Nubic"></p></td>
+                        </tr>
+                        <tr>
+                            <td><h4>Descripcion: </h4></td>
+                            <td><p id="Dubic"></p></td>
+                        </tr>
+                        <tr>
+                            <td><h4>Observacion: </h4></td>
+                            <td><p id="Obic"></p></td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+                <table id="items">
+                    <tbody>
+                        <tr>
+                            <td align="center" onclick="call(2)"><img src="cerillos_indx.png" alt=""></td>
+                            <td align="center" onclick="call(1)"><img src="Palo_indx.png" alt=""></td>
+                            <td align="center" onclick="call(0)"><img src="Papel_indx.png" alt=""></td>
+                            <td align="center" onclick="call(3)"><img src="Fuego_indx.png" alt=""></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>    
+                </table>
+            
+        </article>
+    </div>
+    
+    <footer id="foot">
+        <p>Pagina hecha por Martin 248127</p>
+    </footer>
+    <script src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        function call(nix){
+            $("#pic").attr("src",items.item[nix]["ImgUrl"])
+            $("#Nres").text(items.item[nix]["Nombre"])
+            $("#Nubic").text(items.item[nix]["Ubicacion"])
+            $("#Dubic").text(items.item[nix]["Descripcion"])
+            $("#Obic").text(items.item[nix]["Observacion"])
+        }
+    </script>
+</body>
+</html>
