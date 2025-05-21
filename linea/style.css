@@ -1,0 +1,94 @@
+body{
+    background-color: black;
+    /*display: flex;
+    flex-direction: column;
+    align-items: center ;
+    justify-content: space-around;*/
+    height:95vh ;
+    margin: 0px;
+    width:100vw;
+}
+header{
+    text-align: center;
+    background-color: rgb(14, 14, 14);
+    width: 100%;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+#menu{
+    background-color: rgb(37, 37, 37);
+    width:100%;
+    height: 40px;
+    border-bottom-right-radius:10px ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.5s;
+}
+#menu button{
+    background-color: brown;
+    border-style: none;
+    padding: 5px;
+    border-radius: 5px;
+    width: 120px;
+    transition: 0.5s;
+}
+#menu button:hover{
+    background-color: rgb(231, 87, 43);
+    border-style: none;
+    height: 35px;
+    padding: 5px;
+    border-radius: 5px;
+    width: 140px;
+    cursor: pointer;
+}
+#foot{
+    position: fixed;
+    bottom: 0%;
+    text-align: center;
+    background-color: rgb(14, 14, 14);
+    width: 100%;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+h2,p,h3{
+    color: rgb(206, 232, 255);
+    margin: 4px;
+}
+.btn{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: rgb(21, 66, 161);
+    transition: 0.3s;
+    border-style: none;
+}
+.btn img{
+    width: 100px;
+    height: 100px;
+}
+.btn:hover{
+    width: 170px;
+    height: 170px;
+    border-radius: 25px;
+    background-color: rgb(83, 131, 233);
+    cursor: pointer;
+}
+#mik{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height:500px;
+}
+#Narr{
+    height: 400px;
+}
+#inMix{
+    text-align: center;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bosque oscuro: Linea de tiempo</title>
+</head>
+<body>
+    <header>
+        <div id="tile">
+            <h2>El bosque oscuro</h2>
+        </div>     
+    </header>
+    <div id="menu">
+        <button onclick="location.href='../index/index.html'">
+            Index
+        </button>
+        <button onclick="location.href='../cuentos/cuento.html'">
+            Cuento
+        </button>
+        <button onclick="location.href='../linea/linea.html'">
+            Linea del tiempo
+        </button>
+        <button onclick="location.href='../objetos/objetos.html'">
+            Objetos
+        </button>
+        <button onclick="location.href='../personajes/personajes.html'">
+            Personajes
+        </button>
+        <button onclick="location.href='../ubicaciones/ubicaciones.html'">
+            Ubicaciones
+        </button>
+    </div>
+    <article id="mik">
+        <button id="bck" class="btn">
+            <img src="back.png" alt="">
+        </button>
+        <div id="inMix">
+            <img src="Fr1" alt="" id="Narr">
+            <h3 id="count"></h3>
+            <p>*Las siguientes imagenes son representativas y no representan con exactitud lo narrado,solo de forma simbolica*</p>
+        </div>
+        <button id="nxt" class="btn">
+            <img src="next.webp" alt="">
+        </button>
+    </article>
+    <footer id="foot">
+        <p>Pagina hecha por Martin 248127</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        var frames = ["Fr1.png","Fr2.png","Fr3.png","Fr4.png","Fr5.png","Fr6.png","Fr7.png","Fr8.png","Fr9.png","Fr10.png","Fr11.png","Fr12.png","Fr13.png","Fr14.png","Fr15.png","Fr16.png","Fr17.png","Fr18.png"]
+        var cout = 0
+        basic()
+        function basic(){
+            $("#Narr").attr("src",frames[cout])
+            $("#count").text((cout+1).toString())
+        }
+        
+        $("#bck").on("click",()=>{
+            if(cout==0){
+                cout=17
+            }else{
+                cout--
+            }
+            basic()
+        })
+        $("#nxt").on("click",()=>{
+            if(cout==17){
+                cout=0
+            }else{
+                cout++
+            }
+            basic()
+        })
+    </script>
+</body>
+</html>
