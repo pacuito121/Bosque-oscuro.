@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bosque oscuro: Ubicaciones</title>
+</head>
+<body>
+    <header>
+        <div id="tile">
+            <h2>El bosque oscuro</h2>
+        </div>     
+    </header>
+    <div id="menu">
+        <button onclick="location.href='../index/index.html'">
+            Index
+        </button>
+        <button onclick="location.href='../cuentos/cuento.html'">
+            Cuento
+        </button>
+        <button onclick="location.href='../linea/linea.html'">
+            Linea del tiempo
+        </button>
+        <button onclick="location.href='../objetos/objetos.html'">
+            Objetos
+        </button>
+        <button onclick="location.href='../personajes/personajes.html'">
+            Personajes
+        </button>
+        <button onclick="location.href='../ubicaciones/ubicaciones.html'">
+            Ubicaciones
+        </button>
+    </div>
+    <article id="midx">
+        <div id="main">
+            <h3 id="nae">`Ubicaciones`</h3>
+            <img src="Lobo.avif" alt="" id="pic">
+        </div>
+        <section id="opx">
+            <div class="opt" onclick="call(0)">
+                <img src="Cabaña.jpeg" alt="">
+                <h5>Cabaña</h5>
+            </div>
+            <div class="opt" onclick="call(2)">
+                <img src="llamas.jpg" alt="">
+                <h5>Bosque (En llamas)</h5>
+            </div>
+            <div class="opt" onclick="call(1)">
+                <img src="Bosque.jpeg" alt="" >
+                <h5>Bosque oscuro</h5>
+            </div>
+        </section>
+    </article>
+    <footer id="foot">
+        <p>Pagina hecha por Martin 248127</p>
+    </footer>
+    <script src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        var use = ubic
+        var music =["Ave.mp3","Jeff.mp3","BS.mp3"]
+        var audi = new Audio(music[0])
+        //console.log(use.producto[0]["Descripcion"])
+        function call(nix){
+            audi.pause()
+            audi.src = music[nix]
+            $('#nae').text(use.ubicaciones[nix]['name'])
+            $('#pic').attr("src",use.ubicaciones[nix]['img'])
+            audi.play()
+        }
+    </script>
+</body>
+</html>
